@@ -1,1 +1,22 @@
+<!doctype HTML>
+<html>
+<!-- To include A-frame -->
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.5/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: scroll;'>
+  <a-scene embedded arjs>
+    <!-- create assest for GEN3 tester -->
+    <a-assets>
+      <a-asset-item id="gen3" src="box.gltf"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <a-entity gltf-model="##gen3"></a-entity>
+    
+    <!-- define a camera which will move according to the marker position -->
+    <a-marker type='pattern' url='path/to/pattern-marker.patt'></a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
 
